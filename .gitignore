@@ -1,0 +1,7 @@
+.idea
+.venv
+dist/
+.DS_Store
+**/__pycache__
+/coverage/
+.coverage
