@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "hexlet-code"
+version = "0.1.0"
+description = "Program, that determines the difference between two data structures"
+authors = ["danilduborezov <95632838+ygracoord@users.noreply.github.com>"]
+readme = "README.md"
+packages = [
+    {include = "gendiff"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.scripts]
+gendiff = "gendiff.scripts.engine:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
