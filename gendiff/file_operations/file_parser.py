@@ -17,5 +17,5 @@ def get_file(file_path: str) -> dict:
             elif extension == '.yml' or extension == '.yaml':
                 file = yaml.safe_load(f)
             return file
-    except (FileNotFoundError, json.JSONDecodeError, yaml.YAMLError, UnicodeDecodeError) as error:
+    except (FileNotFoundError, json.JSONDecodeError, yaml.YAMLError) as error:
         raise error
