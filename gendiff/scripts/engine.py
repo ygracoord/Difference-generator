@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
+from typing import NoReturn
 from gendiff.cli import cli_parse
-from gendiff.gendiff import generate_diff
+from gendiff.file_operations.gendiff import generate_diff
 
 
-def main():
+def main() -> NoReturn:
     args = cli_parse()
     print(generate_diff(args.first_file, args.second_file))
 
