@@ -6,7 +6,7 @@ from gendiff.file_operations.gendiff import generate_diff
 
 def main() -> NoReturn:
     args = cli_parse()
-    print(generate_diff(args.first_file, args.second_file))
+    print(generate_diff(args.first_file, args.second_file, args.format))
 
 
 if __name__ == '__main__':
