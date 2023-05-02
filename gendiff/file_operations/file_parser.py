@@ -4,10 +4,10 @@ import yaml
 
 JSON = '.json'
 YAML_OR_YML = ('.yaml', '.yml')
-EXTENSIONS = (JSON, YAML_OR_YML)
+EXTENSIONS = (JSON, *YAML_OR_YML)
 
 
-def get_file(file_path: str) -> dict:
+def get_data(file_path: str) -> dict:
     _, extension = os.path.splitext(file_path)
     if extension not in EXTENSIONS:
         raise ValueError(f"Incorrect file format: {extension}")
