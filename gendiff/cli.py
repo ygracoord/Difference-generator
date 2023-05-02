@@ -1,4 +1,5 @@
 import argparse
+from gendiff.formatters.rendering import DEFAULT
 
 
 def cli_parse() -> argparse.Namespace:
@@ -7,7 +8,11 @@ def cli_parse() -> argparse.Namespace:
     )
     parser.add_argument('first_file')
     parser.add_argument('second_file')
-    parser.add_argument('-f', '--format', help='set format of output')
+    parser.add_argument(
+        '-f', '--format',
+        help='set format of output',
+        default=DEFAULT
+    )
     args = parser.parse_args()
 
     return args
