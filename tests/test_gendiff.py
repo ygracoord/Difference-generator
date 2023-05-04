@@ -21,7 +21,7 @@ RESULT_STYLISH_ATTACHED = 'tests/fixtures/output_files/stylish_attached.txt'
     (FLAT_YML1, FLAT_YML2, STYLISH, RESULT_STYLISH),
     (FLAT_YML1, FLAT_JSON2, STYLISH, RESULT_STYLISH),
     (ATTACHED_JSON1, ATTACHED_JSON2, STYLISH, RESULT_STYLISH_ATTACHED),
-    # (ATTACHED_YML1, ATTACHED_YML2, STYLISH, RESULT_STYLISH_ATTACHED),
+    (ATTACHED_YML1, ATTACHED_YML2, STYLISH, RESULT_STYLISH_ATTACHED),
 ])
 def test_generate_diff(file_1, file_2, format, result_file):
     with open(result_file) as file:
