@@ -1,6 +1,6 @@
 from gendiff.file_operations.diff import make_diff
 from gendiff.file_operations.file_parser import get_data
-from gendiff.formatters.rendering import render_tree, DEFAULT
+from gendiff.formats.rendering import render_tree, DEFAULT
 
 
 def generate_diff(file_path1: str, file_path2: str, format: str = DEFAULT) -> str:  # noqa: E501

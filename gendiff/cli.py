@@ -1,5 +1,5 @@
 import argparse
-from gendiff.formatters.rendering import DEFAULT
+from gendiff.formats.rendering import DEFAULT
 
 
 def cli_parse() -> argparse.Namespace:
