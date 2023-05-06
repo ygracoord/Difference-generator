@@ -15,6 +15,10 @@ First, use the -h flag to help:
     
     gendiff -h
 
-<h4>JSON files:</h4>
+<h4>Flat JSON/YML files (Format - Stylish):</h4>
 
-[![asciicast](https://asciinema.org/a/570024.png)](https://asciinema.org/a/570024)
+[![asciicast](https://asciinema.org/a/582938.png)](https://asciinema.org/a/582938)
+
+<h4>Attached JSON/YML files (Format - Stylish):</h4>
+
+[![asciicast](https://asciinema.org/a/582931.png)](https://asciinema.org/a/582931)
