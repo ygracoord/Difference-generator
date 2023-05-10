@@ -1,7 +1,7 @@
 import pytest
 
 from gendiff.file_operations.gendiff import generate_diff
-from gendiff.formats.rendering import STYLISH
+from gendiff.formats.rendering import STYLISH, PLAIN
 
 FLAT_JSON1 = 'tests/fixtures/input_files/file1.json'
 FLAT_JSON2 = 'tests/fixtures/input_files/file2.json'
@@ -14,6 +14,8 @@ ATTACHED_YML2 = 'tests/fixtures/input_files/file4.yml'
 
 RESULT_STYLISH = 'tests/fixtures/output_files/stylish.txt'
 RESULT_STYLISH_ATTACHED = 'tests/fixtures/output_files/stylish_attached.txt'
+RESULT_PLAIN = 'tests/fixtures/output_files/plain.txt'
+RESULT_PLAIN_ATTACHED = 'tests/fixtures/output_files/plain_attached.txt'
 
 
 @pytest.mark.parametrize('file_1, file_2, format, result_file', [
@@ -22,6 +24,11 @@ RESULT_STYLISH_ATTACHED = 'tests/fixtures/output_files/stylish_attached.txt'
     (FLAT_YML1, FLAT_JSON2, STYLISH, RESULT_STYLISH),
     (ATTACHED_JSON1, ATTACHED_JSON2, STYLISH, RESULT_STYLISH_ATTACHED),
     (ATTACHED_YML1, ATTACHED_YML2, STYLISH, RESULT_STYLISH_ATTACHED),
+    (FLAT_JSON1, FLAT_JSON2, PLAIN, RESULT_PLAIN),
+    (FLAT_YML1, FLAT_YML2, PLAIN, RESULT_PLAIN),
+    (FLAT_YML1, FLAT_YML2, PLAIN, RESULT_PLAIN),
+    (ATTACHED_JSON1, ATTACHED_JSON2, PLAIN, RESULT_PLAIN_ATTACHED),
+    (ATTACHED_YML1, ATTACHED_YML2, PLAIN, RESULT_PLAIN_ATTACHED),
 ])
 def test_generate_diff(file_1, file_2, format, result_file):
     with open(result_file) as file:

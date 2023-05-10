@@ -22,3 +22,11 @@ First, use the -h flag to help:
 <h4>Attached JSON/YML files (Format - Stylish):</h4>
 
 [![asciicast](https://asciinema.org/a/582931.png)](https://asciinema.org/a/582931)
+
+<h4>Flat JSON/YML files (Format - Plain):</h4>
+
+[![asciicast](https://asciinema.org/a/583859.png)](https://asciinema.org/a/583859)
+
+<h4>Attached JSON/YML files (Format - Plain):</h4>
+
+[![asciicast](https://asciinema.org/a/583862.png)](https://asciinema.org/a/583862)
