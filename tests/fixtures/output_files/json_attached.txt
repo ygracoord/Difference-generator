@@ -1,0 +1,170 @@
+[
+    {
+        "key": "common",
+        "value": {
+            "old": null,
+            "new": null
+        },
+        "type": "attached",
+        "children": [
+            {
+                "key": "follow",
+                "value": {
+                    "old": null,
+                    "new": false
+                },
+                "type": "added"
+            },
+            {
+                "key": "setting1",
+                "value": {
+                    "old": "Value 1",
+                    "new": null
+                },
+                "type": "unchanged"
+            },
+            {
+                "key": "setting2",
+                "value": {
+                    "old": 200,
+                    "new": null
+                },
+                "type": "deleted"
+            },
+            {
+                "key": "setting3",
+                "value": {
+                    "old": true,
+                    "new": null
+                },
+                "type": "changed"
+            },
+            {
+                "key": "setting4",
+                "value": {
+                    "old": null,
+                    "new": "blah blah"
+                },
+                "type": "added"
+            },
+            {
+                "key": "setting5",
+                "value": {
+                    "old": null,
+                    "new": {
+                        "key5": "value5"
+                    }
+                },
+                "type": "added"
+            },
+            {
+                "key": "setting6",
+                "value": {
+                    "old": null,
+                    "new": null
+                },
+                "type": "attached",
+                "children": [
+                    {
+                        "key": "doge",
+                        "value": {
+                            "old": null,
+                            "new": null
+                        },
+                        "type": "attached",
+                        "children": [
+                            {
+                                "key": "wow",
+                                "value": {
+                                    "old": "",
+                                    "new": "so much"
+                                },
+                                "type": "changed"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "key",
+                        "value": {
+                            "old": "value",
+                            "new": null
+                        },
+                        "type": "unchanged"
+                    },
+                    {
+                        "key": "ops",
+                        "value": {
+                            "old": null,
+                            "new": "vops"
+                        },
+                        "type": "added"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "key": "group1",
+        "value": {
+            "old": null,
+            "new": null
+        },
+        "type": "attached",
+        "children": [
+            {
+                "key": "baz",
+                "value": {
+                    "old": "bas",
+                    "new": "bars"
+                },
+                "type": "changed"
+            },
+            {
+                "key": "foo",
+                "value": {
+                    "old": "bar",
+                    "new": null
+                },
+                "type": "unchanged"
+            },
+            {
+                "key": "nest",
+                "value": {
+                    "old": {
+                        "key": "value"
+                    },
+                    "new": "str"
+                },
+                "type": "changed"
+            }
+        ]
+    },
+    {
+        "key": "group2",
+        "value": {
+            "old": {
+                "abc": 12345,
+                "deep": {
+                    "id": 45
+                }
+            },
+            "new": null
+        },
+        "type": "deleted"
+    },
+    {
+        "key": "group3",
+        "value": {
+            "old": null,
+            "new": {
+                "deep": {
+                    "id": {
+                        "number": 45
+                    }
+                },
+                "fee": 100500
+            }
+        },
+        "type": "added"
+    }
+]
