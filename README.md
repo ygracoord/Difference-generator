@@ -30,3 +30,11 @@ First, use the -h flag to help:
 <h4>Attached JSON/YML files (Format - Plain):</h4>
 
 [![asciicast](https://asciinema.org/a/583862.png)](https://asciinema.org/a/583862)
+
+<h4>Flat JSON/YML files (Format - Json):</h4>
+
+[![asciicast](https://asciinema.org/a/584149.png)](https://asciinema.org/a/584149)
+
+<h4>Attached JSON/YML files (Format - Json):</h4>
+
+[![asciicast](https://asciinema.org/a/584148.png)](https://asciinema.org/a/584148)
