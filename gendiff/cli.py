@@ -1,5 +1,5 @@
 import argparse
-from gendiff.formats.rendering import DEFAULT
+from gendiff.formats.rendering import FormatType
 
 
 def cli_parse() -> argparse.Namespace:
@@ -11,7 +11,7 @@ def cli_parse() -> argparse.Namespace:
     parser.add_argument(
         '-f', '--format',
         help='set format of output',
-        default=DEFAULT
+        default=FormatType.STYLISH
     )
     args = parser.parse_args()
 
