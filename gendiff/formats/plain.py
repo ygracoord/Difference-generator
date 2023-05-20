@@ -11,11 +11,10 @@ TEMPLATES = {
 }
 
 
-def render_nodes(diff: list, root='') -> str:
+def render_nodes(diff: dict, root='') -> str:
     result = []
-    diff.sort(key=lambda node: node['key'])
 
-    for node in diff:
+    for node in diff['children']:
         path = PATH.format(root, node['key']) if root else node['key']
 
         if node['type'] == ChangeType.ADDED:
@@ -34,12 +33,12 @@ def render_nodes(diff: list, root='') -> str:
             ))
 
         elif node['type'] == ChangeType.ATTACHED:
-            result.append(render_nodes(node['children'], path))
+            result.append(render_nodes(node, path))
 
     return '\n'.join(result)
 
 
-def render_plain(diff_tree: list) -> str:
+def render_plain(diff_tree: dict) -> str:
     finished_data = render_nodes(diff_tree)
     return finished_data
 

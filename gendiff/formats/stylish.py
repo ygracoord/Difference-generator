@@ -57,12 +57,11 @@ def collect_row(key: Any, value: Any, sign: str, depth: int) -> str:
     return '\n'.join(result)
 
 
-def render_nodes(diff: list, depth: int = 1) -> str:  # noqa: C901
+def render_nodes(diff: dict, depth: int = 1) -> str:  # noqa: C901
     result = []
     offset = make_offset(depth)
-    diff.sort(key=lambda node: node['key'])
 
-    for node in diff:
+    for node in diff['children']:
 
         if node['type'] == ChangeType.DELETED:
             result.append(collect_row(
@@ -90,13 +89,13 @@ def render_nodes(diff: list, depth: int = 1) -> str:  # noqa: C901
         elif node['type'] == ChangeType.ATTACHED:
             result.extend([
                 TEMPLATES['begin'].format(offset, ' ', node['key']),
-                render_nodes(node['children'], depth + 1),
+                render_nodes(node, depth + 1),
                 TEMPLATES['end'].format(offset)
             ])
 
     return '\n'.join(result)
 
 
-def render_stylish(diff_tree: list) -> str:
+def render_stylish(diff_tree: dict) -> str:
     finished_data = TEMPLATES['base'].format(render_nodes(diff_tree))
     return finished_data
