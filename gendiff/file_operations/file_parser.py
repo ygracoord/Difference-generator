@@ -4,19 +4,20 @@ import yaml
 
 JSON = '.json'
 YAML_OR_YML = ('.yaml', '.yml')
-EXTENSIONS = (JSON, *YAML_OR_YML)
 
 
-def get_data(file_path: str) -> dict:
-    _, extension = os.path.splitext(file_path)
-    if extension not in EXTENSIONS:
+def parse(content, extension):
+    if extension == JSON:
+        return json.loads(content)
+    elif extension in YAML_OR_YML:
+        return yaml.safe_load(content)
+    else:
         raise ValueError(f"Incorrect file format: {extension}")
-    try:
-        with open(file_path) as f:
-            if extension == JSON:
-                file = json.load(f)
-            elif extension in YAML_OR_YML:
-                file = yaml.safe_load(f)
-            return file
-    except (FileNotFoundError, json.JSONDecodeError, yaml.YAMLError) as error:
-        raise error
+
+
+def get_data(file_path: str):
+    _, extension = os.path.splitext(file_path)
+
+    with open(file_path) as file:
+        content = file.read()
+    return parse(content, extension)
